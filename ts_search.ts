@@ -1,4 +1,5 @@
 import * as fs from 'fs';
+import * as _ from 'lodash';
 
 function runSearch() {
     // 1. Obtener la palabra de búsqueda del argumento de línea de comandos (índice 2 en Node.js)
@@ -23,7 +24,8 @@ function runSearch() {
     const startTime: [number, number] = process.hrtime();
     
     // Usar RegExp para un conteo preciso
-    const matches = text.match(new RegExp(searchWord, 'g'));
+    const safeSearchWord = _.escapeRegExp(searchWord);
+    const matches = text.match(new RegExp(safeSearchWord, 'g'));
     const count: number = matches ? matches.length : 0;
     
     const elapsedTime: [number, number] = process.hrtime(startTime);
