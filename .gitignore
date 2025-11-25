@@ -1,0 +1,25 @@
+# Dependencies
+/node_modules
+/vendor
+npm-debug.log
+yarn-error.log
+
+# Build artifacts
+/rust_search/target/
+*.exe
+*.o
+*.so
+
+# TypeScript/Node.js build output
+/dist
+/tsconfig.tsbuildinfo
+
+# IDE files
+.vscode/
+.idea/
+
+# Rust project files
+Cargo.lock
+
+# Temporary files created during runtime
+.DS_Store

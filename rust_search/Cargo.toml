@@ -1,0 +1,7 @@
+# rust_search/Cargo.toml
+[package]
+name = "rust_search"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
